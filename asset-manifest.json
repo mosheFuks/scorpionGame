@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/scorpionGame/static/css/main.e7e671dd.css",
+    "main.js": "/scorpionGame/static/js/main.ff56d819.js",
+    "static/js/453.39da49bb.chunk.js": "/scorpionGame/static/js/453.39da49bb.chunk.js",
+    "index.html": "/scorpionGame/index.html",
+    "main.e7e671dd.css.map": "/scorpionGame/static/css/main.e7e671dd.css.map",
+    "main.ff56d819.js.map": "/scorpionGame/static/js/main.ff56d819.js.map",
+    "453.39da49bb.chunk.js.map": "/scorpionGame/static/js/453.39da49bb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e7e671dd.css",
+    "static/js/main.ff56d819.js"
+  ]
+}
