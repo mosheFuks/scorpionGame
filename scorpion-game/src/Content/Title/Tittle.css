@@ -1,0 +1,55 @@
+.tittle-text {
+    text-align: center;
+    font-size: 100px;
+    margin: 10px auto; /* Centra el título horizontalmente */
+    margin-top: 10px; /* Margen superior de 10px */
+    font-weight: bold; /* Grosor de fuente de 10 */
+    color: white; /* Color blanco */
+}
+
+.contenedor-subtittle {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .sub-contenedor {
+    margin: 10px;
+  }
+  
+  .sub-tittle-text {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .boton-subtittle {
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 45px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ADD8E6;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to right, #ADD8E6 0%, #1976D2 50%, #ADD8E6 100%);
+    background-size: 200% 100%;
+    animation: moverBorde 2s ease infinite;
+  }
+
+  @keyframes moverBorde {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: -100% 0%;
+    }
+  }
+  
+  

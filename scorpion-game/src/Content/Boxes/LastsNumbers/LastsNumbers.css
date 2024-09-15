@@ -1,0 +1,58 @@
+.container {
+    text-align: center;
+  }
+  
+  .titulo {
+    color: white;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .lista-elecciones {
+    list-style: none;
+    padding: 0;
+    margin: 10px auto;
+    width: 70%;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 5px;
+  }
+  
+  .lista-elecciones li {
+    border-bottom: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+    height: 30px;
+  }
+  
+  .lista-elecciones li:last-child {
+    border-bottom: none;
+  }
+
+  .eleccion {
+    color: white;
+    font-size: 25px;
+  }
+
+  /*.animacion {
+     display: block;
+     font-family: monospace;
+     border-right: 4px solid;
+     width: 12ch;
+
+     animation: typing 2s steps(12),
+      blink .5s infinite step-end alternate;
+     overflow: hidden;
+  }
+
+  @keyframes typing {
+    from { width: 0}
+  }
+
+  @keyframes blink {
+    50% { border-color: transparent}
+  }*/
+   
+
+  

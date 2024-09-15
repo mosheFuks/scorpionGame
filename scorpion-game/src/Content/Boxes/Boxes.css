@@ -1,0 +1,52 @@
+.conteiner {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+    margin-top: 10px;
+    width: 100%;
+    height: 300px;
+}
+
+.contenedor { 
+    height: 200px;  
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+}
+  
+.div-amarillo {
+    margin-top: 40px;
+    width: 100%;
+    height: 100%;
+}
+
+.boton_replay {
+    display: block;
+    margin: 10px auto;
+    margin-bottom: 45px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: none;
+    background-color: #ADD8E6;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    background: linear-gradient(to right, #ADD8E6 0%, #1976D2 50%, #ADD8E6 100%);
+    background-size: 200% 100%;
+    animation: moverBorde 2s ease infinite;
+}
+
+@keyframes moverBorde {
+    from {
+      background-position: 0% 0%;
+    }
+    to {
+      background-position: -100% 0%;
+    }
+  }
+  
+.boton:hover {
+    background-color: #97C2D8;
+}
