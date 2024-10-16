@@ -60,17 +60,17 @@ function InputNumber() {
   return (
     <div class="container">
     {validInput?
-    <h6 class="titulo">Shoot your number</h6>
+    <h6 class="titulo">Submit your number</h6>
     :
     <div class="input-container">
-      <p class="titulo" style={{color: "red"}}>{inputValue == newInsertedNumber ? "Please enter other number": "At least you have to enter a four digit number"}</p>
+      <p class="titulo" style={{color: "red"}}>{inputValue == newInsertedNumber ? "Please enter other number": "You must enter at least a four-digit number"}</p>
     </div>
     }
     <div class="input-container">
         <input type="text" class="numero-input" placeholder="Type a number" onChange={(event) => setInputValue(event.target.value)}/>
     </div>
     {validInput && !checkingAnswer?
-      <button class="boton" onClick={() => checkAnswer()}>SHOOT</button>
+      <button class="boton" onClick={() => checkAnswer()}>SUBMIT</button>
     : 
     null
     }

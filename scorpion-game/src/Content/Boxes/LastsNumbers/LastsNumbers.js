@@ -26,7 +26,7 @@ function LastsNumbers() {
   
   return (
     <div class="container">
-        <h6 class="titulo">Your last three choices were:</h6>
+        <h6 class="titulo">Your last three guesses were:</h6>
         <ul class="lista-elecciones">
             <li class="eleccion animacion">{trackedAnswers[0] }</li>
             <li class="eleccion animacion">{trackedAnswers[1] }</li>

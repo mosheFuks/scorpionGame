@@ -7,7 +7,7 @@ function Tittle() {
   console.log("START start value: ", start)
 
   let subtitle = ""
-  const canYouGuess = "CAN YOU GUESS THE HIDDEN NUMBER?"
+  const canYouGuess = "CAN YOU GUESS THE SECRET NUMBER?"
   const noCorrectNumber = "YOU DO NOT GUESS ANY NUMBER"
   const oneNumber = "YOU HAVE GUESS ONE CORRECT NUMBER"
   const twoNumber = "YOU HAVE GUESS TWO CORRECT NUMBERS"
