@@ -3,7 +3,7 @@ import { useContext, useState } from 'react';
 import { Context } from '../../../Context/Context';
 
 function InputNumber() {
-  const { mainNumber, setNumbersAnsweredOk, setNewInsertedNumber,  newInsertedNumber} = useContext(Context);
+  const { mainNumber, setNumbersAnsweredOk, setNewInsertedNumber,  newInsertedNumber, timesPlayed, setTimesPlayed} = useContext(Context);
   
   const [inputValue, setInputValue] = useState("");
   const [validInput, setValidInput] = useState(true);
@@ -54,29 +54,30 @@ function InputNumber() {
       setTimeout(() => {
         analyzeAnswer()
       }, 3000);
+      setTimesPlayed(timesPlayed+1)
     }
   } 
 
   return (
     <div class="container">
     {validInput?
-    <h6 class="titulo">Submit your number</h6>
+      <h6 class="titulo">ESCRIBE UN NUMERO</h6>
     :
-    <div class="input-container">
-      <p class="titulo" style={{color: "red"}}>{inputValue == newInsertedNumber ? "Please enter other number": "You must enter at least a four-digit number"}</p>
-    </div>
+      <div class="input-container">
+        <p class="titulo" style={{color: "red"}}>{inputValue == newInsertedNumber ? "Porfavor, escriba otro numero": "El numero debe ser de 4 digitos"}</p>
+      </div>
     }
     <div class="input-container">
         <input type="text" class="numero-input" placeholder="Type a number" onChange={(event) => setInputValue(event.target.value)}/>
     </div>
     {validInput && !checkingAnswer?
-      <button class="boton" onClick={() => checkAnswer()}>SUBMIT</button>
+      <button class="boton" onClick={() => checkAnswer()}>ENVIAR</button>
     : 
     null
     }
     {validInput && checkingAnswer? 
     <div>
-      <h4 style={{color: "#ADD8E6"}}>LOADING</h4>
+      <h4 style={{color: "#ADD8E6"}}>ANALIZANDO</h4>
       <div class="loading-container">
         <div class="loading-bar"></div>
       </div>

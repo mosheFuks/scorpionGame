@@ -4,6 +4,7 @@ import SheetNumber from './Content/SheetNumber/SheetNumber';
 import Tittle from './Content/Title/Tittle';
 import Boxes from './Content/Boxes/Boxes';
 import AppProvider from './Context/Context';
+import Navbar from './Content/Navbar/Navbar'
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
       <AppProvider>
         {" "}
         <React.StrictMode>
+          <Navbar />
           <Tittle />
           <SheetNumber />
           <Boxes />

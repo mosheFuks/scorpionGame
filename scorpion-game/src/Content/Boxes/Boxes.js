@@ -3,9 +3,10 @@ import InputNumber from './InpuntNumber.js/InputNumber';
 import LastsNumbers from './LastsNumbers/LastsNumbers';
 import { useContext } from 'react';
 import { Context } from '../../Context/Context';
+import TimesPlayed from './TimesPlayed/TimesPlayed';
 
 export default function Boxes( { mainNumber }) {
-  const { start, gameOver, setStart, setGameOver, setNumbersAnsweredOk } = useContext(Context);
+  const { start, gameOver, setStart, setGameOver, setNumbersAnsweredOk, setTimesPlayed } = useContext(Context);
 
   if (start == true && gameOver == false) {
     return (
@@ -17,6 +18,9 @@ export default function Boxes( { mainNumber }) {
             <div class="div-amarillo">
                 <LastsNumbers />
             </div>
+            <div class="div-amarillo">
+                <TimesPlayed />
+            </div>
         </div>
       </div>
     )
@@ -25,7 +29,7 @@ export default function Boxes( { mainNumber }) {
   if (gameOver == true) {
     return (
       <div>
-        <button class="boton-subtittle" onClick={() => {setStart(false); setGameOver(false); setNumbersAnsweredOk(-1)}}>PLAY AGAIN</button>
+        <button class="boton-subtittle" onClick={() => {setStart(false); setGameOver(false); setNumbersAnsweredOk(0); setTimesPlayed(0)}}>PLAY AGAIN</button>
       </div>
     )
   }

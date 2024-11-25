@@ -1,18 +1,19 @@
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Context } from '../../Context/Context';
 import './Tittle.css';
 
 function Tittle() {
-  const { start,  numbersAnsweredOk, setStart,  fullAnswerOk, finalSubtittle, setFinalSubttitle, setGameOver } = useContext(Context);
+  const { start, numbersAnsweredOk, setStart, fullAnswerOk, finalSubtittle, setFinalSubttitle, setGameOver } = useContext(Context);
+  const [displayedSubtitle, setDisplayedSubtitle] = useState('');
   console.log("START start value: ", start)
 
   let subtitle = ""
-  const canYouGuess = "CAN YOU GUESS THE SECRET NUMBER?"
-  const noCorrectNumber = "YOU DO NOT GUESS ANY NUMBER"
-  const oneNumber = "YOU HAVE GUESS ONE CORRECT NUMBER"
-  const twoNumber = "YOU HAVE GUESS TWO CORRECT NUMBERS"
-  const threeNumber = "YOU HAVE GUESS THREE CORRECT NUMBERS"
-  const full = "PERFECT, YOU HAVE GUESS THE RIGHT NUMBER!!"
+  const canYouGuess = "PODRAS ADIVINAR EL NUMERI SECRETO?"
+  const noCorrectNumber = "NO ADIVINASTE NINGUN NUMERO"
+  const oneNumber = "ADIVINASTE UN NUMERO!"
+  const twoNumber = "ADIVINASTE DOS NUMEROS!"
+  const threeNumber = "ADIVINASTE TRES NUMEROS!"
+  const full = "FELICIDADES, ADIVINASTE TODOS LOS NUMEROS!!"
 
   useEffect(() => {
     console.log("GET IN HERE")
@@ -31,8 +32,20 @@ function Tittle() {
       subtitle = noCorrectNumber
     }
     setFinalSubttitle(subtitle)
-
   }, [numbersAnsweredOk])
+
+  useEffect(() => {
+    let index = 0;
+    const intervalId = setInterval(() => {
+      setDisplayedSubtitle(finalSubtittle.slice(0, index));
+      index++;
+      if (index > finalSubtittle.length) {
+        clearInterval(intervalId);
+      }
+    }, 50);
+
+    return () => clearInterval(intervalId);
+  }, [finalSubtittle]);
 
   return (
     <div>
@@ -41,10 +54,10 @@ function Tittle() {
       </div>
       <div class="contenedor-subtittle">
         <div class="sub-contenedor">
-          <h5 class="sub-tittle-text">{finalSubtittle}</h5>
+          <h5 class="sub-tittle-text">{displayedSubtitle}</h5>
         </div>
         <div class="sub-contenedor">
-          {!start ? <button class="boton-subtittle" onClick={() => setStart(true)}>CONTINUE</button> : null}        
+          {!start ? <button class="boton-subtittle" onClick={() => setStart(true)}>CONTINUAR</button> : null}        
         </div>
       </div>
     </div>
@@ -52,3 +65,4 @@ function Tittle() {
 }
 
 export default Tittle;
+

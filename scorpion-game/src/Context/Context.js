@@ -9,6 +9,7 @@ const AppProvider = ({ children }) => {
     const [gameOver, setGameOver] = useState(false); 
     const [finalSubtittle, setFinalSubttitle] = useState("");
     const [numbersAnsweredOk, setNumbersAnsweredOk] = useState(-1);
+    const [timesPlayed, setTimesPlayed] = useState(0)
 
     const randomNumber = Math.floor(1000 + Math.random() * 9000).toString();
     const [mainNumber, setMainNumber] = useState(randomNumber);
@@ -22,22 +23,15 @@ const AppProvider = ({ children }) => {
     return (
         <Context.Provider
             value={{
-                setStart,
-                start,
-                newInsertedNumber,
-                setNewInsertedNumber,
-                fullAnswerOk,
-                setFullAnswerOk,
-                errorAnswer, 
-                setErrorAnswer,
-                finalSubtittle,
-                setFinalSubttitle,
-                mainNumber, 
-                setMainNumber,
-                numbersAnsweredOk, 
-                setNumbersAnsweredOk,
-                gameOver, 
-                setGameOver
+                start, setStart,
+                newInsertedNumber, setNewInsertedNumber,
+                fullAnswerOk, setFullAnswerOk,
+                errorAnswer, setErrorAnswer,
+                finalSubtittle, setFinalSubttitle,
+                mainNumber, setMainNumber,
+                numbersAnsweredOk, setNumbersAnsweredOk,
+                gameOver, setGameOver,
+                timesPlayed, setTimesPlayed
             }}
         >
             {children}
