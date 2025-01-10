@@ -37,26 +37,25 @@ function Navbar() {
             </p>
         </div>
         <div style={{ display: "flex", flexDirection: "row", alignItems: "center"}}>
-            <CircleCheck color='green'/>
+            <CircleCheck color='green' size={35}/>
             <p className="modal-text">
                 Paso 2: El programa te diria si adivinaste algun numero del numero oculto!
             </p>
         </div>
-        <div style={{ display: "flex", flexDirection: "row", alignItems: "center"}}>
+        <div style={{ display: "flex", flexDirection: "column", marginLeft: '20px'}}>
             <p className="modal-text">
                 Ejemplo: 
             </p>
+            <p className="modal-text">
+              Numero escondido '5478'     
+            </p>
+            <p className="modal-text">
+              Numero ingresado '9658'    
+            </p>
+            <p className="modal-text">
+              Resulatdo: Adivinaste un numero (en este caso el 8, el de la ultima posición)    
+            </p>
         </div>
-        
-        <p className="modal-text">
-          Numero escondido '5478'     
-        </p>
-        <p className="modal-text">
-          Numero ingresado '9658'    
-        </p>
-        <p className="modal-text">
-          Resulatdo: Adivinaste un numero (en este caso el 8, el de la ultima posición)    
-        </p>
       
         <div style={{ display: "flex", flexDirection: "row", alignItems: "center"}}>
             <CircleAlert color='red' size={48}/>
